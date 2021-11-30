@@ -67,29 +67,41 @@ var readlineSync = require('readline-sync');
 console.log("Lets play a game ");
 console.log("**************************************");
 
-console.log("How well do you know me? ");
+console.log("Lets Play!! How well do you know me? ");
 console.log("");
 var user = readlineSync.question("What is your name ? ");
 console.log("");
 var highScore = {
   name:"Atharva",
-  score:2
+  score:5
 }
 questionOne = {
-  question1: "Who is Atharva's favorite superhero?",
+  question: "Who is Atharva's favorite superhero?",
   answer: "Superman"
 }
 
 questionTwo = {
-  question1: "Who is Atharva's favorite Cricketer?",
+  question: "Who is Atharva's favorite Cricketer?",
   answer: "Virat Kohli"
 }
+questionThree = {
+  question: "What is Atharva's favourite food?",
+  answer: "Pizza"
+}
+questionFour = {
+  question: "What is Atharva's favorite travel destination?",
+  answer: "Norway"
+}
+questionFive = {
+  question: "Who is Atharva's Mentor?",
+  answer: "Tanay Pratap"
+}
 var score = 0;
-var questions = [questionOne,questionTwo];
+var questions = [questionOne,questionTwo,questionThree,questionFour,questionFive];
 for(var i = 0;i<questions.length;i++){
-  var userans = readlineSync.question(questions[i].question1);
+  var userans = readlineSync.question(questions[i].question);
   if(userans.toUpperCase() == questions[i].answer.toUpperCase()){
-    console.log("You are absolutely correct!!!");
+    console.log("You are right!!");
     console.log("");
     score++;
     
